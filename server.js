@@ -8,7 +8,7 @@ const app = require('./app.js');
 const server = http.createServer(app);
 
 // Définition du port sur lequel le serveur écoutera les connexions
-const PORT = 3006;
+const PORT = 3005;
 
 // Démarrage du serveur et affichage d'un message de confirmation
 server.listen(PORT, 'localhost', () => {

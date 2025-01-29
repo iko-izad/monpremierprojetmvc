@@ -51,8 +51,8 @@ app.get('/programmetv', (req, res) => {
 });
 
 // Démarrer le serveur
-app.listen(3006, () => {
-    console.log("Serveur disponible sur http://localhost:3006");
+app.listen(3005, () => {
+    console.log("Serveur disponible sur http://localhost:3005");
 });
 
 module.exports = app;
