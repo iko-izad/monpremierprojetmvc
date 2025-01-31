@@ -1,147 +1,107 @@
 /* styles.css */
+
 /* Style général du corps de la page */
 body {
-    font-family: 'Arial', sans-serif;
-    /* Utilisation de la police Arial */
-    background-image: url('chaines-tv-du-monde-rue-de-linfo.png');
-    background-size: cover;
-    /* Ajuster l'image de fond pour couvrir toute la page */
-    background-position: center;
-    /* Centrer l'image de fond */
-    margin: 0;
-    padding: 0;
-    color: #333;
-    /* Couleur de texte par défaut plus douce */
+    font-family: 'Arial', sans-serif; /* Utilisation d'une police simple et lisible */
+    background-image: url('chaintv2.webp'); /* Ajout de l'image de fond */
+    background-size: cover; /* L'image couvre toute la page sans répétition */
+    background-position: center; /* L'image est centrée */
+    background-attachment: fixed; /* Fixe l'image pour un effet de parallaxe */
+    position: relative; /* Permet d'ajouter un calque au-dessus */
+    background-size: auto 100%; /* Réduit la hauteur à 80% de l'écran */
+    background-repeat: no-repeat; /* Empêche la répétition de l'image */
+    background-position: center top; /* Centre l'image et la place en haut */
+    background-color: rgb(60, 38, 25);
+    
+}
+
+
+
+/* Tous les éléments doivent être visibles au-dessus du voile */
+h1, ul, nav, footer {
+    position: relative;
+    z-index: 1; /* Assure qu'ils apparaissent au-dessus du voile */
 }
 
 /* Style des titres h1 */
 h1 {
-    text-align: center;
-    /* Centrer le texte */
-    color: #000000;
-    /* Couleur violette */
-    margin-top: 30px;
-    /* Espacement en haut */
-    font-size: 2.5em;
-    /* Taille du texte */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-    /* Ombre légère pour le titre */
+    text-align: center; /* Centrage du titre */
+    color: #ffffff; /* Blanc pour assurer un bon contraste */
+    margin-top: 30px; /* Espacement au-dessus du titre */
+    font-size: 2.5em; /* Taille du texte */
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Ombre pour améliorer la visibilité */
 }
 
-/* Style de la liste non ordonnée */
+/* Style des listes non ordonnées */
 ul {
-    list-style-type: none;
-    /* Supprimer les puces */
+    list-style-type: none; /* Suppression des puces */
     padding: 0;
-    margin: 20px auto;
-    /* Centrer la liste */
-    max-width: 600px;
-    /* Largeur maximale */
+    margin: 20px auto; /* Centrage horizontal */
+    max-width: 600px; /* Largeur maximale pour éviter un affichage trop large */
 }
 
 /* Style des éléments de la liste */
 ul li {
-    margin: 10px 0;
-    /* Espacement entre les éléments */
-    padding: 15px 20px;
-    /* Ajout de marge intérieure */
-    border-radius: 8px;
-    /* Coins arrondis */
-    background-color: rgba(17, 2, 7, 0.9);
-    /* Fond semi-transparent */
-    box-shadow: 0 4px 6px rgba(217, 13, 13, 0.3);
-    /* Ombre légère */
-    display: flex;
-    /* Utilisation de flexbox */
-    justify-content: space-between;
-    /* Espacement des éléments */
-    align-items: center;
-    /* Centrage vertical */
-    font-size: 1.2em;
-    /* Taille du texte */
-    color: #e30e0e;
-    /* Couleur du texte */
-    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
-    /* Animation fluide */
+    margin: 10px 0; /* Espacement entre les éléments */
+    padding: 15px 20px; /* Espacement interne */
+    border-radius: 8px; /* Coins arrondis */
+    background-color: rgba(183, 208, 60, 0.8); /* Fond semi-transparent pour voir l'image derrière */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre pour donner du relief */
+    display: flex; /* Utilisation de flexbox */
+    justify-content: space-between; /* Répartition des éléments sur la ligne */
+    align-items: center; /* Centrage vertical */
+    font-size: 1.2em; /* Taille du texte */
+    color: #000; /* Texte noir pour une bonne lisibilité */
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Effet fluide */
 }
 
 /* Effet au survol des éléments de la liste */
 ul li:hover {
-    background-color: #4e4969;
-    /* Changement de couleur */
-    transform: scale(1.02);
-    /* Agrandissement léger */
-    cursor: pointer;
-    /* Curseur pointer pour indiquer l'interactivité */
-}
-
-/* Style des textes en gras à l'intérieur de la liste */
-ul li span {
-    font-weight: bold;
-    /* Texte en gras */
-    color: #cf18a4;
-    /* Couleur violette */
+    background-color: rgba(255, 255, 255, 0.9); /* Légèrement plus clair */
+    transform: scale(1.02); /* Agrandissement léger pour effet dynamique */
+    cursor: pointer; /* Indique que l'élément est interactif */
 }
 
 /* Style de la barre de navigation */
 nav {
-    background-color: #313d3c;
-    /* Couleur de fond */
-    display: flex;
-    /* Utilisation de flexbox pourF les éléments */
-    justify-content: center;
-    /* Centrer les liens horizontalement */
-    align-items: center;
-    /* Centrer les liens verticalement */
-    padding: 10px 20px;
-    /* Espacement interne */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    /* Légère ombre pour la barre */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond semi-transparent pour voir un peu l’image */
+    display: flex; /* Alignement des liens horizontalement */
+    justify-content: center; /* Centrage des liens */
+    align-items: center; /* Centrage vertical */
+    padding: 10px 20px; /* Espacement interne */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour donner du relief */
 }
 
 /* Style des liens de navigation */
 nav a {
-    color: #ffffff;
-    /* Couleur des liens (blanc) */
-    margin: 0 15px;
-    /* Espacement horizontal entre les liens */
-    text-decoration: none;
-    /* Supprimer le soulignement des liens */
-    font-size: 1.2em;
-    /* Taille de police plus grande pour les liens */
-    font-weight: bold;
-    /* Texte en gras pour les liens */
-    transition: color 0.3s ease, transform 0.3s ease;
-    /* Animation fluide */
+    color: #ffffff; /* Blanc pour un bon contraste */
+    margin: 0 15px; /* Espacement entre les liens */
+    text-decoration: none; /* Suppression du soulignement */
+    font-size: 1.2em; /* Agrandissement du texte */
+    font-weight: bold; /* Mise en gras */
+    transition: color 0.3s ease, transform 0.3s ease; /* Animation fluide */
 }
 
-/* Effet au survol des liens de navigation */
+/* Effet au survol des liens */
 nav a:hover {
-    color: #e74c3c;
-    /* Couleur lors du survol */
-    transform: translateY(-2px);
-    /* Légère élévation */
+    color: #e74c3c; /* Changement de couleur */
+    transform: translateY(-2px); /* Légère élévation */
 }
 
 /* Style du pied de page */
 footer {
-    text-align: center;
-    padding: 15px 0;
-    background-color: #2a3a3c;
-    /* Couleur de fond */
-    color: #fff;
-    /* Couleur du texte */
+    text-align: center; /* Centrage du texte */
+    padding: 15px 0; /* Espacement interne */
+    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent */
+    color: #fff; /* Texte blanc */
     position: relative;
     bottom: 0;
     width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    /* Ombre légère en haut */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour séparer du contenu */
 }
 
-/* Ajout d'une animation subtile pour le footer */
+/* Animation au survol du footer */
 footer:hover {
-    background-color: #1e2a2b;
-    /* Changement de couleur au survol */
-    transition: background-color 0.3s ease-in-out;
-    /* Animation fluide */
+    background-color: rgba(0, 0, 0, 0.9); /* Changement de couleur */
+    transition: background-color 0.3s ease-in-out; /* Effet fluide */
 }

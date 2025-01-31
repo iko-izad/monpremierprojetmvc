@@ -1,9 +1,20 @@
+ 
+ 
+ CREATE DATABASE chainetv;
+
+SHOW DATABASE;
+
+
+ USE chainetv;
+ 
  CREATE TABLE equipe(id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,nom VARCHAR(100) 
  NOT NULL,prenom VARCHAR(100) NOT NULL,poste VARCHAR(100) NOT NULL);
 
 
    CREATE TABLE programmediffusion (id INT PRIMARY KEY NOT NULL AUTO_INCREMENT, nom_programme VARCHAR(100)
     NOT NULL,date_diffusion DATE NOT NULL, heure_diffusion TIME NOT NULL);
+
+
 
     INSERT INTO equipe (nom,prenom,poste) VALUES ("Youssef","Zahra","directrice générale");
 
