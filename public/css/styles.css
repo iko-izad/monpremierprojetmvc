@@ -3,20 +3,17 @@
 /* Style général du corps de la page */
 body {
     font-family: 'Arial', sans-serif; /* Utilisation d'une police simple et lisible */
-    background-image: url('chaintv2.webp'); /* Ajout de l'image de fond */
+    background-image: url('coutv.webp'); /* Ajout de l'image de fond */
     background-size: cover; /* L'image couvre toute la page sans répétition */
     background-position: center; /* L'image est centrée */
     background-attachment: fixed; /* Fixe l'image pour un effet de parallaxe */
     position: relative; /* Permet d'ajouter un calque au-dessus */
-    background-size: auto 100%; /* Réduit la hauteur à 80% de l'écran */
+    background-size: auto 99%; /* Réduit la hauteur à 80% de l'écran */
     background-repeat: no-repeat; /* Empêche la répétition de l'image */
     background-position: center top; /* Centre l'image et la place en haut */
-    background-color: rgb(60, 38, 25);
+    background-color: rgb(50, 17, 17);
     
 }
-
-
-
 /* Tous les éléments doivent être visibles au-dessus du voile */
 h1, ul, nav, footer {
     position: relative;
@@ -25,11 +22,17 @@ h1, ul, nav, footer {
 
 /* Style des titres h1 */
 h1 {
-    text-align: center; /* Centrage du titre */
-    color: #ffffff; /* Blanc pour assurer un bon contraste */
-    margin-top: 30px; /* Espacement au-dessus du titre */
-    font-size: 2.5em; /* Taille du texte */
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6); /* Ombre pour améliorer la visibilité */
+    color: blue;
+    margin: 0; 
+    color: #00539f;
+    text-shadow: 2px 2px 5px red;
+    text-align: center;
+}
+
+
+h2 {
+    background: linear-gradient(90deg, rgb(235, 86, 17),rgb(28, 172, 146));
+    text-align: center;
 }
 
 /* Style des listes non ordonnées */
@@ -45,7 +48,7 @@ ul li {
     margin: 10px 0; /* Espacement entre les éléments */
     padding: 15px 20px; /* Espacement interne */
     border-radius: 8px; /* Coins arrondis */
-    background-color: rgba(183, 208, 60, 0.8); /* Fond semi-transparent pour voir l'image derrière */
+    background-color: rgba(247, 36, 96, 0.8); /* Fond semi-transparent pour voir l'image derrière */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Ombre pour donner du relief */
     display: flex; /* Utilisation de flexbox */
     justify-content: space-between; /* Répartition des éléments sur la ligne */
@@ -57,7 +60,7 @@ ul li {
 
 /* Effet au survol des éléments de la liste */
 ul li:hover {
-    background-color: rgba(255, 255, 255, 0.9); /* Légèrement plus clair */
+    background-color: rgba(142, 186, 65, 0.9); /* Légèrement plus clair */
     transform: scale(1.02); /* Agrandissement léger pour effet dynamique */
     cursor: pointer; /* Indique que l'élément est interactif */
 }
@@ -79,6 +82,7 @@ nav a {
     text-decoration: none; /* Suppression du soulignement */
     font-size: 1.2em; /* Agrandissement du texte */
     font-weight: bold; /* Mise en gras */
+    font-style: oblique;
     transition: color 0.3s ease, transform 0.3s ease; /* Animation fluide */
 }
 
@@ -90,14 +94,14 @@ nav a:hover {
 
 /* Style du pied de page */
 footer {
-    text-align: center; /* Centrage du texte */
-    padding: 15px 0; /* Espacement interne */
-    background-color: rgba(0, 0, 0, 0.7); /* Fond sombre semi-transparent */
-    color: #fff; /* Texte blanc */
     position: relative;
     bottom: 0;
     width: 100%;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5); /* Ombre pour séparer du contenu */
+    text-align: center;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.5);
 }
 
 /* Animation au survol du footer */
@@ -105,3 +109,57 @@ footer:hover {
     background-color: rgba(0, 0, 0, 0.9); /* Changement de couleur */
     transition: background-color 0.3s ease-in-out; /* Effet fluide */
 }
+
+ul {
+    list-style-type: none; /* Supprime les puces de la liste */
+    padding: 0; /* Supprime le padding par défaut */
+}
+
+li {
+    background: #e14242; /* Fond blanc pour chaque élément de la liste */
+    margin: 5px 0; /* Marge entre les éléments */
+    padding: 10px; /* Padding à l'intérieur des éléments */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+}
+
+form {
+    background: linear-gradient(90deg, rgb(25, 193, 227),rgb(145, 26, 193));/* Fond pour le formulaire */
+    padding: 20px; /* Padding à l'intérieur du formulaire */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin: 20px auto; /* Marge au-dessus et en bas, centré horizontalement */
+    width: 500px; /* Largeur fixe du formulaire */
+    max-width: 90%; /* Largeur maximale pour les petits écrans */
+}
+
+label {
+    display: block; /* Affiche chaque label sur une nouvelle ligne */
+    margin: 10px 0 5px; /* Marge autour des labels */
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+    width: 100%; /* Prend toute la largeur du conteneur */
+    padding: 9px; /* Padding à l'intérieur des champs */
+    border: 1px solid #ccc; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+}
+
+button {
+    background-color: #61ed82; /* Couleur de fond verte */
+    color: white; /* Couleur du texte */
+    padding: 10px 15px; /* Padding à l'intérieur du bouton */
+    border: none; /* Supprime la bordure par défaut */
+    border-radius: 5px; /* Coins arrondis */
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+button:hover {
+    background-color: #218838; /* Couleur de fond plus foncée au survol */
+}
+
+
+

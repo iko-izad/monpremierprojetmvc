@@ -1,6 +1,6 @@
 <!-- views/programmetv.ejs -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,9 +12,14 @@
     <nav>
         <%- include("navbar") -%>
     </nav>
-    <ul>
+    <ul>  
         <% programmes.forEach(programme => { %>
-            <li><%= programme.nom_programme %> - <%= programme.date_diffusion %> à <%= programme.heure_diffusion %></li>
+            <li>
+                <%= programme.nom_programme %> - <%= programme.date_diffusion %> à <%= programme.heure_diffusion %>
+                <br>
+                <!-- Ajout de la vidéo pour chaque programme -->
+                <iframe width="420" height="345" src="<%= programme.lien_video %>" frameborder="0" allowfullscreen></iframe>
+            </li>
         <% }); %>
     </ul>
 </body>

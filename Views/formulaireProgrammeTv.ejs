@@ -1,0 +1,44 @@
+<!-- views/formulaireProgrammeTv.ejs -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Formulaire Programme TV</title>
+</head>
+<body>
+    <h1>Programmes TV</h1>
+
+    <nav>
+        <%- include("navbar") -%>
+    </nav>
+    
+    <h2>Liste des Programmes</h2>
+    <ul>
+        <% programmes.forEach(programme => { %>
+            <li>
+                <%= programme.nom_programme %> - <%= programme.date_diffusion %> à <%= programme.heure_diffusion %>
+            </li>
+        <% }); %>
+    </ul>
+
+    <h2>Ajouter un Programme TV</h2>
+    <form action="/ajouterProgrammetv" method="POST">
+        <label for="nom_programme">Nom du Programme :</label>
+        <input type="text" id="nom_programme" name="nom_programme" required><br>
+
+        <label for="date_diffusion">Date de Diffusion :</label>
+        <input type="date" id="date_diffusion" name="date_diffusion" required><br>
+
+        <label for="heure_diffusion">Heure de Diffusion :</label>
+        <input type="time" id="heure_diffusion" name="heure_diffusion" required><br>
+
+        <label for="lien_video">Lien de la Vidéo :</label>
+        <input type="url" id="lien_video" name="lien_video" required placeholder="https://example.com/video"><br>
+
+        <button type="submit">Ajouter</button>
+    </form>
+</body>
+<%- include("footer") -%>
+</html>

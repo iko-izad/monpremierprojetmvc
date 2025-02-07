@@ -1,4 +1,3 @@
-<!-- views/apropos.ejs -->
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -14,10 +13,14 @@
     </nav>
     <ul>
         <% membres.forEach(membre => { %>
-            <li><%= membre.nom %> <%= membre.prenom %> - <%= membre.poste %></li>
+            <li>
+                <img src="/images/pexels-kebs-visuals.jpg" alt="<%= membre.nom1 %> <%= membre.prenom1 %>" style="width: 100px; height: auto; border-radius: 50%;">
+                <span><%= membre.nom %> <%= membre.prenom %> - <%= membre.poste %></span>
+            </li>
         <% }); %>
     </ul>
 </body>
+
 
 <%- include("footer") -%>
 </html>

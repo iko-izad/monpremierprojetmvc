@@ -35,5 +35,26 @@ INSERT INTO programmediffusion (nom_programme, date_diffusion, heure_diffusion)
 
    SELECT * FROM programmediffusion;
 
+   ALTER TABLE programmedeffusion ADD liens_video VARCHAR (500);
+   
+   UPDATE programmediffusion SET lien_video = ' https://www.youtube.com/watch?v=ZlRvPRMGoOU |'WHERE id = 3;
 
     DELETE FROM equipe WHERE id = 3;   
+
+
+ CREATE TABLE utilisateur(id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,nom VARCHAR(100) NOT NULL, 
+ prenom VARCHAR(100)NOT NULL,email VARCHAR (255) NOT  NULL,mot_de_passe VARCHAR(255) NOT NULL,date_de_naissance DATE);
+
+  INSERT INTO utilisateur (nom,prenom,email,mot_de_passe,date_de_naissance) VALUES 
+  ('Nabil','Bachira','bachiranabil@gmail.com','bachi125', '1990-05-15');
+
+INSERT INTO utilisateur (nom, prenom, email, mot_de_passe, date_de_naissance) VALUES 
+('Djibril', 'Ikrima', 'djibril.ikrima@gmail.com', 'ikra90k', '1985-11-22');
+
+INSERT INTO utilisateur (nom, prenom, email, mot_de_passe, date_de_naissance) VALUES 
+('Hachim', 'Yazid', 'yazid.hachim@gmail.com', 'yazi4697', '1992-09-29');
+
+ INSERT INTO utilisateur (nom, prenom, email, mot_de_passe, date_de_naissance) VALUES 
+ ('Oussama', 'Brahim', 'oussama.brahim@gmail.com', 'brahima446', '1978-03-08');
+
+ 
